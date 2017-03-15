@@ -6,6 +6,7 @@ Final for Advanced Database
 http://35.160.116.116:7474/browser/   
 Username: neo4j
 Password: neo4j
+Query to see all nodes/relationships: MATCH (n) RETURN n
 
 # The basic use of my Python Script
 I import the needed libraries, and connect to my neo4j instance. 
