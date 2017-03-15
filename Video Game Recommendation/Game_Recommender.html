@@ -94,7 +94,7 @@
                 contentType: "application/json",
                 data: JSON.stringify(query),
                 beforeSend: function (xhr) {
-                    xhr.setRequestHeader("Authorization", "Basic " + btoa("neo4j:neo4j1"));
+                    xhr.setRequestHeader("Authorization", "Basic " + btoa("neo4j:neo4j"));
                 },
                 success: function (data) {
 
@@ -138,7 +138,7 @@
                 contentType: "application/json",
                 data: JSON.stringify(query),
                 beforeSend: function (xhr) {
-                    xhr.setRequestHeader("Authorization", "Basic " + btoa("neo4j:neo4j1"));
+                    xhr.setRequestHeader("Authorization", "Basic " + btoa("neo4j:neo4j"));
                 },
                 success: function (data) {
                     var table = document.getElementById("res");
