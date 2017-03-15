@@ -16,8 +16,6 @@ for i in range(1,500):
 		gplayers = gdata['query']['results']['Data']['Game']['Players'] + " Player(s)"
 		
 		
-		#session.run("CREATE (a:Person {name: {name}, title: {title}})",
-              #{"name": "Arthur", "title": "King"})
 		session.run("MERGE (g:GameTitle {name: {Title}}) MERGE (p:Platform {name: {Platform}}) MERGE (pub:Publisher {name: {Publisher}}) MERGE (dev:Developer {name: {Developer}}) MERGE (rate:Rating {name: {Rating}}) MERGE (gen:Genre {name: {Genre}}) MERGE (play:Players {name: {Players}}) MERGE (g) -[:PLATFORM]-> (p) MERGE (g) -[:PUBLISHED_BY]-> (pub) MERGE (g) -[:DEVELOPED_BY]-> (dev) MERGE (g) -[:RATING]-> (rate) MERGE (g) -[:GENRE]-> (gen) MERGE (g) -[:NUM_OF_PLAYERS]-> (play)",
 			{"Title": gtitle, "Platform": gplatform, "Publisher": gpublisher, "Developer": gdeveloper, "Rating": grating, "Genre": ggenre, "Players": gplayers})
 		print (gtitle, gplatform, gpublisher, gdeveloper, grating, ggenre, gplayers)
